@@ -26,7 +26,7 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/C:/Users/milos/Pictures/IMG_20201201_095814.jpg"
+							"src": ""
 						}
 					],
 					"options": {
@@ -36,14 +36,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/api/blog/post",
+					"raw": "{{host}}/api/blog/posts",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"api",
 						"blog",
-						"post"
+						"posts"
 					]
 				}
 			},
@@ -55,15 +55,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/api/blog/post/5eeee7ab-7e62-4fe5-8ad3-b39fa7140d6b",
+					"raw": "{{host}}/api/blog/posts/a3c1ad19-5f39-4f73-9bd6-b89ee144c408",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"api",
 						"blog",
-						"post",
-						"5eeee7ab-7e62-4fe5-8ad3-b39fa7140d6b"
+						"posts",
+						"a3c1ad19-5f39-4f73-9bd6-b89ee144c408"
 					]
 				}
 			},
@@ -87,14 +87,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/api/blog/post?page=1&maxItems=30",
+					"raw": "{{host}}/api/blog/posts?page=1&maxItems=30",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"api",
 						"blog",
-						"post"
+						"posts"
 					],
 					"query": [
 						{

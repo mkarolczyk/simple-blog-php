@@ -17,6 +17,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/posts", name="post_")
+ */
 class BlogPostController extends AbstractController
 {
     private const MESSAGE_STATUS_OK = 'Adding a blog post is a work in progress.';
@@ -29,7 +32,7 @@ class BlogPostController extends AbstractController
     }
 
     /**
-     * @Route("/post", name="add_post", methods={"POST"})
+     * @Route("", name="add", methods={"POST"})
      */
     public function addPost(Request $request, ParameterBagInterface $parameterBag): JsonResponse
     {
@@ -63,7 +66,7 @@ class BlogPostController extends AbstractController
     }
 
     /**
-     * @Route("/post/{blogPostId}", name="get_post", methods={"GET"})
+     * @Route("/{blogPostId}", name="get", methods={"GET"})
      */
     public function getPost(string $blogPostId): JsonResponse
     {
@@ -71,7 +74,7 @@ class BlogPostController extends AbstractController
     }
 
     /**
-     * @Route("/post", name="get_all_post", methods={"GET"})
+     * @Route("", name="get_all", methods={"GET"})
      */
     public function getAllPost(Request $request, BlogPostQueryRepositoryInterface $blogPostQueryRepository): JsonResponse
     {
