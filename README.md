@@ -19,7 +19,7 @@ docker exec -it blog_php_1 bash
 **3. Inicjalizacja projektu (z poziomu kontenera PHP):**
 
 ```
-sh script/init-prod.sh
+sh script/init.sh
 ```
 
 **4. Wygenerowanie przykładowych danych (opcjonalnie):**
