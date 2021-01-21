@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: nginx:latest
+    image: nginx:latest-blog
     build:
       context: docker/nginx
       dockerfile: Dockerfile
@@ -14,7 +14,7 @@ services:
       - .:/var/www/html
 
   php:
-    image: php:7.4-fpm
+    image: php:7.4-fpm-blog
     working_dir: /var/www/html
     build:
       context: docker/php
