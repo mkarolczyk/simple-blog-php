@@ -20,4 +20,7 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-/public/images/
+/upload/temp/images/*
+/public/images/*
+!/public/images/.gitkeep
+!/upload/temp/images/.gitkeep
