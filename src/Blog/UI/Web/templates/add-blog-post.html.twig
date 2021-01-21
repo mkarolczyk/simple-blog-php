@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}Add blog post{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4"><span class="badge badge-primary"><i class="bi bi-bookmark-plus-fill"></i></span>&nbsp;Add blog post</h1>
+            {{ form(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+      $('.custom-file-input').on('change', function (event) {
+        var inputFile = event.currentTarget;
+        $(inputFile).parent()
+          .find('.custom-file-label')
+          .html(inputFile.files[0].name);
+      });
+    </script>
+{% endblock %}

@@ -1,0 +1,4 @@
+doctrine:
+    dbal:
+        types:
+            uuid: 'App\Shared\Common\UuidDoctrineType'

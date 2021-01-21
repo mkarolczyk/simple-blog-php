@@ -1,0 +1,15 @@
+includes:
+        - vendor/phpstan/phpstan-symfony/extension.neon
+        - vendor/phpstan/phpstan-symfony/rules.neon
+        - vendor/phpstan/phpstan-phpunit/rules.neon
+        - vendor/phpstan/phpstan-mockery/extension.neon
+parameters:
+    level: max
+    checkMissingIterableValueType: false
+    paths:
+        - 'src'
+        - 'tests'
+    symfony:
+#        container_xml_path: '%rootDir%/../../../var/cache/test/App_KernelTestDebugContainer.xml'
+    bootstrapFiles:
+    	- bin/.phpunit/phpunit-7.5-0/vendor/autoload.php

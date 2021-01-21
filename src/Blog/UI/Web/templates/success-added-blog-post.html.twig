@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+{% block title %}Adding a blog post is a work in progress...{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4"><span class="badge badge-success"><i class="bi bi-bookmark-plus-fill"></i></span>&nbsp;Adding a blog post is a work in progress...</h1>
+            <p style="margin-bottom: 50px;">Added blog post ID: <strong>{{ blogPostId }}</strong></p>
+            <a class="btn btn-primary btn-lg" href="{{ path('web_blog_add_post') }}" role="button">Add other blog post</a>
+        </div>
+    </div>
+{% endblock %}

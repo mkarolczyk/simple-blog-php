@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "d3805ca2-854c-42e7-b9fd-9e0b3cef7f35",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add blog post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": " <b>This is my blog post.</b>",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "<strong></strong><p></p><ul></ul><ol></ol><li></li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/milos/Pictures/IMG_20201201_095814.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/blog/post",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"blog",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/blog/post/5eeee7ab-7e62-4fe5-8ad3-b39fa7140d6b",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"blog",
+						"post",
+						"5eeee7ab-7e62-4fe5-8ad3-b39fa7140d6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/blog/post?page=1&maxItems=30",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"blog",
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "maxItems",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://localhost"
+		}
+	]
+}

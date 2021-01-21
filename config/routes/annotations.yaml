@@ -1,0 +1,14 @@
+controllers_blog_web:
+    resource: ../../src/Blog/UI/Web/Controller
+    type: annotation
+    name_prefix: web_blog_
+    prefix: /
+controllers_blog_api:
+    resource: ../../src/Blog/UI/Rest/
+    type: annotation
+    name_prefix: api_blog_
+    prefix: /api/blog
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation
