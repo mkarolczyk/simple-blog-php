@@ -25,11 +25,6 @@
                 "conditions": []
             },
             {
-                "action": "composer tests",
-                "options": [],
-                "conditions": []
-            },
-            {
                 "action": "composer static:analyze",
                 "options": [],
                 "conditions": []
